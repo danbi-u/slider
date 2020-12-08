@@ -1,0 +1,48 @@
+*{margin: 0; padding: 0;}
+ul{list-style: none}
+
+#slider{
+    width: 400px;
+    height: 300px;
+    margin: 200px auto 0;
+    border: 1px solid #aaa;
+    overflow-x: hidden;
+    position: relative;
+    border-radius: 5px;
+}
+
+#slider .panel{
+    width: calc(400px * 3);
+    height: 100%;
+    transition: margin-left .3s;
+}
+
+#slider .panel li{
+    width: 400px;
+    height: 100%;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+#slider .dots{
+    position: absolute;
+    left: calc(50% - 24px);
+    bottom: 20px;
+    display: flex;
+
+}
+#slider .dots li{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background: rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+#slider .dots li.on{
+    background: #007aff;
+}
